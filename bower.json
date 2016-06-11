@@ -1,0 +1,15 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "authors": [
+    "Nizam Akhmedov <nyzam7@gmail.com>"
+  ],
+  "description": "Project",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    
+  }
+}
