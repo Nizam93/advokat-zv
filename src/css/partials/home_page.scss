@@ -1,4 +1,4 @@
 body {
   background: $bg-color;
-  @include respond-to(tablets) { background: #f00; }
+  @include respond-to(tablets) { background: #f0f; }
 }
