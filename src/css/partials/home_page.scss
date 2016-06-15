@@ -1,8 +1,22 @@
 
 header {
   padding: 15px 0;
+  background-color: #e3e3e4;
+  font-size: 1.1429em;
+  a {
+    color: #000;
+  }
+
+  a.logo:hover {
+    color: #000;
+  }
   #logo {
     text-transform: uppercase;
-    font-size: 1.1429em;
+  }
+  .contacts {
+    font-weight: 300;
+    div:last-child {
+      text-align: right;
+    }
   }
 }
