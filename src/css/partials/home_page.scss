@@ -29,6 +29,11 @@ header {
   #logo {
     text-transform: uppercase;
   }
+  h1 {
+    font-size: 1em;
+    line-height: 1.42857;
+    margin: 0;
+  }
   .contacts {
     font-weight: 300;
     @include respond-to(all-handhelds) {
@@ -102,6 +107,24 @@ header {
     label {
       @include respond-to(all-handhelds) {
         text-align: left;
+      }
+    }
+  }
+}
+
+#services-for-individual, #services-for-entity {
+  padding: 50px 0;
+  ul {
+    margin-top: 40px;
+    li {
+      list-style-type: none;
+      height: 56px;
+      margin-top: 10px;
+      h4 {
+        line-height: 1.42857;
+        a {
+          color: #333;
+        }
       }
     }
   }
