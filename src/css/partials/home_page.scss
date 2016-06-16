@@ -116,15 +116,39 @@ header {
   padding: 50px 0;
   ul {
     margin-top: 40px;
+    padding: 0;
     li {
       list-style-type: none;
       height: 56px;
       margin-top: 10px;
+      @include respond-to(all-handhelds) {
+        margin-top: 30px;
+        height: 100px;
+      }
       h4 {
         line-height: 1.42857;
         a {
           color: #333;
         }
+      }
+      .media-body, .media-left, .media-right {
+        @include respond-to(all-handhelds) {
+          display: block;
+        }
+      }
+      .media-body {
+        @include respond-to(all-handhelds) {
+          width: auto;
+          margin-top: 5px;
+        }
+      }
+    }
+    li[class*=col-xs-] {
+      @include respond-to(handhelds) {
+        width: 100%;
+      }
+      @include respond-to(narrow-handhelds) {
+        width: 100%;
       }
     }
   }
