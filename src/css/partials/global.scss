@@ -45,4 +45,11 @@
 body {
   background: $bg-color;
   font-family: 'Proxima Nova';
+  @include respond-to(all-handhelds) {
+    text-align: center;
+  }
+}
+
+textarea {
+  resize: none;
 }

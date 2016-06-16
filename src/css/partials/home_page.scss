@@ -1,22 +1,96 @@
 
 header {
-  padding: 15px 0;
-  background-color: #e3e3e4;
   font-size: 1.1429em;
-  a {
-    color: #000;
+  background: url("../img/bg/header-bg-lg.jpg") no-repeat center 0 / cover;
+  color: #fff;
+  @include respond-to(small-desktops) {
+    background: url("../img/bg/header-bg-md.jpg") no-repeat center 0 / cover;
   }
-
+  @include respond-to(tablets) {
+    background: url("../img/bg/header-bg-sm.jpg") no-repeat center 0 / cover;
+    font-size: 1em;
+  }
+  @include respond-to(all-handhelds) {
+    background: url("../img/bg/header-bg-xs.jpg") no-repeat center 0 / cover;
+  }
+  #logo-and-contacts {
+    padding-top: 15px;
+  }
+  a, a:hover {
+    color: #fff;
+  }
   a.logo:hover {
-    color: #000;
+    color: #fff;
+    text-decoration: none;
   }
   #logo {
     text-transform: uppercase;
   }
   .contacts {
     font-weight: 300;
-    div:last-child {
+    @include respond-to(all-handhelds) {
+      margin-top: 10px;
+    }
+    &:last-child {
       text-align: right;
+      @include respond-to(all-handhelds) {
+        text-align: center;
+      }
+    }
+  }
+  nav {
+    margin-top: 15px;
+  }
+  .about {
+    margin-top: 90px;
+    @include respond-to(tablets) {
+      margin-top: 100px;
+    }
+    @include respond-to(all-handhelds) {
+      margin-top: 0;
+    }
+    .name {
+      font-size: 60px;
+      font-weight: 700;
+      @include respond-to(small-desktops) {
+        font-size: 50px;
+      }
+      @include respond-to(tablets) {
+        font-size: 40px;
+      }
+      @include respond-to(all-handhelds) {
+        font-size: 34px;
+      }
+    }
+    .services {
+      font-size: 35px;
+      color: #c3c3c3;
+      @include respond-to(small-desktops) {
+        font-size: 30px;
+      }
+      @include respond-to(tablets) {
+        font-size: 22px;
+      }
+      @include respond-to(all-handhelds) {
+        font-size: 18px;
+      }
+    }
+  }
+  .question {
+    margin-top: 50px;
+    @include respond-to(small-desktops) {
+      margin-top: 30px;
+    }
+    @include respond-to(tablets) {
+      margin-top: 30px;
+    }
+    @include respond-to(all-handhelds) {
+      margin-top: 30px;
+    }
+    label {
+      @include respond-to(all-handhelds) {
+        text-align: left;
+      }
     }
   }
 }

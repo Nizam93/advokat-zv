@@ -9,8 +9,7 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     cleanCSS = require('gulp-clean-css'),
     clean = require('gulp-clean'),
-    htmlReplace = require('gulp-html-replace'),
-    uncss = require('gulp-uncss');
+    htmlReplace = require('gulp-html-replace');
 
 var path = {
     dist: {
@@ -72,8 +71,6 @@ gulp.task('build:css', function () {
         }))
         .pipe(prefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(uncss({html: ['src/template/header.html','src/index.html', 'src/template/footer.html']}))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.css))
 });
@@ -100,7 +97,6 @@ gulp.task('build', [
 gulp.task('watch', function () {
     watch(path.watch.html, function () {
         gulp.start('build:html');
-        gulp.start('build:css');
     });
     watch(path.watch.css, function () {
         gulp.start('build:css')
