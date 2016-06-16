@@ -15,6 +15,9 @@ header {
   }
   #logo-and-contacts {
     padding-top: 15px;
+    @include respond-to(full-hd) {
+      padding-top: 70px;
+    }
   }
   a, a:hover {
     color: #fff;
@@ -40,11 +43,17 @@ header {
   }
   nav {
     margin-top: 15px;
+    @include respond-to(full-hd) {
+      margin-top: 50px;
+    }
   }
   .about {
     margin-top: 90px;
     @include respond-to(tablets) {
       margin-top: 100px;
+    }
+    @include respond-to(full-hd) {
+      margin-top: 170px;
     }
     @include respond-to(all-handhelds) {
       margin-top: 0;
@@ -78,6 +87,9 @@ header {
   }
   .question {
     margin-top: 50px;
+    @include respond-to(full-hd) {
+      margin-top: 120px;
+    }
     @include respond-to(small-desktops) {
       margin-top: 30px;
     }
