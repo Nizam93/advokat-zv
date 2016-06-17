@@ -38,10 +38,31 @@ function setSlidingEffectToDropdowns() {
     }
 }
 
+function setMap() {
+    ymaps.ready(init);
+    var myMap,
+        placeMark;
+
+    function init() {
+        myMap = new ymaps.Map("map", {
+            center: [42.9806398, 47.508374],
+            zoom: 18,
+            controls: []
+        });
+        myMap.behaviors.disable('scrollZoom');
+        placeMark = new ymaps.Placemark([42.9806398, 47.508374], {
+            hintContent: 'Logix',
+            balloonContent: 'Создание сайтов'
+        });
+        myMap.geoObjects.add(placeMark);
+    }
+}
+
 $(document).ready(function () {
     setDynamicParams();
     setHeaderSize();
     setSlidingEffectToDropdowns();
+    setMap();
 });
 
 $(window).resize(function () {

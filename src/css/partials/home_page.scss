@@ -19,8 +19,9 @@ header {
       padding-top: 70px;
     }
   }
-  a, a:hover {
+  a, a:link, a:visited, a:hover, a:focus, a:active {
     color: #fff;
+    outline: none;
   }
   a.logo:hover {
     color: #fff;
@@ -31,6 +32,8 @@ header {
   }
   h1 {
     font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 3px;
     line-height: 1.42857;
     margin: 0;
   }
@@ -78,7 +81,7 @@ header {
     }
     .services {
       font-size: 35px;
-      color: #c3c3c3;
+      color: #f7f7f7;
       @include respond-to(small-desktops) {
         font-size: 30px;
       }
@@ -112,7 +115,7 @@ header {
   }
 }
 
-#services-for-individual, #services-for-entity {
+#services-for-individual {
   padding: 50px 0;
   ul {
     margin-top: 40px;
@@ -154,6 +157,47 @@ header {
   }
 }
 
-#services-for-entity {
-  background-color: #f7f7f7;
+#map {
+  height: 400px;
+}
+
+footer {
+  padding: 30px 0;
+  color: #666;
+  a, a:link, a:visited, a:hover, a:focus, a:active {
+    color: #666;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+  .copyright {
+    .name {
+      font-size: 28px;
+    }
+    .copyright-text {
+
+    }
+  }
+  .social {
+    text-align: center;
+    padding-top: 15px;
+    img {
+      opacity: .6;
+      &:hover {
+        opacity: .9;
+      }
+    }
+    a + a img {
+      margin-left: 10px;
+    }
+  }
+  .contacts {
+    text-align: right;
+    .adress {
+      font-size: 18px;
+    }
+    .phone {
+      font-size: 24px;
+    }
+  }
 }
