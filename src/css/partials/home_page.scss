@@ -164,23 +164,28 @@ header {
 footer {
   padding: 30px 0;
   color: #666;
+  @include respond-to(all-handhelds) {
+    .container > div + div {
+      margin-top: 10px;
+    }
+  }
   a, a:link, a:visited, a:hover, a:focus, a:active {
     color: #666;
   }
   a:hover, a:focus, a:active {
     text-decoration: underline;
   }
-  .copyright {
+  .logo {
     .name {
       font-size: 28px;
-    }
-    .copyright-text {
-
     }
   }
   .social {
     text-align: center;
     padding-top: 15px;
+    @include respond-to(all-handhelds) {
+      padding-top: 0;
+    }
     img {
       opacity: .6;
       &:hover {
@@ -193,11 +198,17 @@ footer {
   }
   .contacts {
     text-align: right;
+    @include respond-to(all-handhelds) {
+      text-align: center;
+    }
     .adress {
       font-size: 18px;
     }
     .phone {
       font-size: 24px;
     }
+  }
+  .copyright {
+    margin-top: -15px;
   }
 }
